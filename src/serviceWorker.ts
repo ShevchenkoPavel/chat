@@ -30,6 +30,7 @@ type Config = {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
 };
+
 function registerValidSW(swUrl: string, config?: Config): void {
   navigator.serviceWorker
     .register(swUrl)
@@ -73,6 +74,7 @@ function registerValidSW(swUrl: string, config?: Config): void {
       console.error('Error during service worker registration:', error);
     });
 }
+
 function checkValidServiceWorker(swUrl: string, config?: Config): void {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)
@@ -100,6 +102,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config): void {
       );
     });
 }
+
 export function register(config?: Config): void {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
