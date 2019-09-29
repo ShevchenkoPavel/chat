@@ -6,14 +6,16 @@ module.exports = {
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
     ],
-    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
     "env": {
         "browser": true,
         "jasmine": true,
         "jest": true
     },
     "rules": {
-        "prettier/prettier": ["error", { "singleQuote": true }]
+        "prettier/prettier": ["error", { "singleQuote": true },],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     },
     "settings": {
         "react": {
