@@ -10,12 +10,15 @@ module.exports = {
     "env": {
         "browser": true,
         "jasmine": true,
-        "jest": true
+        "jest": true,
+        "es6": true
     },
+    // "parserOptions": { "ecmaVersion": 10 },
     "rules": {
         "prettier/prettier": ["error", { "singleQuote": true },],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        // 'max-len': [2, { "code": 120 }]
     },
     "settings": {
         "react": {
