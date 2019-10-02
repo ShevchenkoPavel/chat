@@ -1,17 +1,17 @@
 import React from 'react';
 import './user.css';
 
-type User = {
+export type UserType = {
   name: string;
 };
 
-const User = ({ name }: User) => {
+export const User = ({ name }: UserType) => {
   return (
-    <div className="users-bar">
-      <header className="users__bar">Users</header>
-      <div className="users__user-list">{name}</div>
+    <div className="user">
+      <div className="user__status" />
+      <div className="user__name">{name}</div>
     </div>
   );
 };
 
-export default User;
+// export default User;

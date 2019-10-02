@@ -1,0 +1,17 @@
+.users-bar {
+    min-width: 20%;
+    box-shadow: 1px 0 5px grey;
+}
+
+.users-bar__header {
+    background-color: rgb(0, 188, 212);
+    font-size: x-large;
+    /*text-align: center;*/
+    padding: 1rem 0 1rem 1rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.users__user-list {
+    margin-left: 1rem;
+}
