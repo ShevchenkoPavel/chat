@@ -1,3 +1,5 @@
+$user_status_on: green;
+
 .user {
     display: flex;
     flex-direction: row;
@@ -8,6 +10,6 @@
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: green;
+    background-color: $user_status_on;
     margin-right: 1rem;
 }

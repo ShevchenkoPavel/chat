@@ -1,5 +1,5 @@
 import React from 'react';
-import './users_bar.css';
+import './users_bar.scss';
 import { User } from '../user/user';
 
 interface UserType {
@@ -13,12 +13,11 @@ export type UsersBarProps = {
 export const UsersBar = ({ users }: UsersBarProps) => {
   return (
     <div className="users-bar">
-      <header className="users-bar__header">users</header>
+      <div className="users-bar__header">users</div>
       <div className="users__user-list">
         {users
           ? users.map(user => <User name={user.name} key={user.name} />)
           : null}
-        {console.log(users)}
       </div>
     </div>
   );
