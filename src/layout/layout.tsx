@@ -1,7 +1,6 @@
 import React from 'react';
 import './layout.css';
 import { UsersBar } from '../users_bar/users_bar';
-// import { get } from '../queries/fetcher';
 import MockUsers from '../mock/users.json';
 import { UserType } from '../user/user';
 
@@ -16,7 +15,6 @@ export class Layout extends React.Component<Props, State> {
   };
 
   componentDidMount(): void {
-    // get('localhost/public/mockapi/users.js');
     this.setState({ users: MockUsers.users });
   }
 
