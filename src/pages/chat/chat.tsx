@@ -5,7 +5,6 @@ import MockUsers from '../../utils/mock/users.json';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { UsersBar } from '../../components/users_bar/users_bar';
-import { MessagesWindow } from '../../components/messages_window/messages_window';
 import { UserType } from '../../types/user';
 
 type Props = {};
@@ -32,9 +31,7 @@ export class Chat extends React.Component<Props, State> {
           <Col xs={4}>
             <UsersBar users={this.state.users} />
           </Col>
-          <Col>
-            <MessagesWindow />
-          </Col>
+          <Col>MessagesWindow</Col>
         </Row>
       </Container>
     );
