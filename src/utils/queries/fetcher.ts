@@ -10,12 +10,10 @@ function checkStatus(response: Response): boolean {
   return response.status >= 200 && response.status < 300;
 }
 
-export async function get(url: string) {
-  try {
-    const response = await fetch(url, DEFAULT_GET_METHOD_BODY);
-    if (checkStatus) return await response.json();
-    // throw new Error(response.status);
-  } catch (err) {
-    return err;
+export async function get<T>(url: string): Promise<T> {
+  const response = await fetch(url, DEFAULT_GET_METHOD_BODY);
+  if (!checkStatus(response)) {
+    throw new Error(String(response.status || 'My error'));
   }
+  return await response.json();
 }
