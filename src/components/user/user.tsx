@@ -1,11 +1,9 @@
 import React from 'react';
 import './user.scss';
 
-export type UserType = {
-  name: string;
-};
+import { UserType } from '../../types/user';
 
-export const User = ({ name }: UserType) => {
+export const User = ({ name }: UserType): React.ReactElement => {
   return (
     <div className="user">
       <div className="user__status" />
