@@ -5,7 +5,7 @@ import { UserType } from '../../types/user';
 import { lang } from '../../lang/EN';
 
 export type UsersBarProps = {
-  users?: UserType[];
+  users: UserType[];
 };
 
 export const UsersBar = ({ users }: UsersBarProps): React.ReactElement => {
