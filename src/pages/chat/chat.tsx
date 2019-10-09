@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import { UsersBar } from '../../components/users_bar/users_bar';
 import { UserType } from '../../types/user';
+import { MessagesWindow } from '../../components/messages_window/messages_window';
 
 export function Chat(): React.ReactElement {
   const [users] = useState<UserType[]>(MockUsers.users);
@@ -19,7 +20,9 @@ export function Chat(): React.ReactElement {
         <Col xs={4}>
           <UsersBar users={users} />
         </Col>
-        <Col>MessagesWindow</Col>
+        <Col>
+          <MessagesWindow />
+        </Col>
       </Row>
     </Container>
   );

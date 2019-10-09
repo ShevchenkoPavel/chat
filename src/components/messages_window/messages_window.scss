@@ -1,5 +1,28 @@
 $messages_window_background_color: rgb(234, 234, 234);
 
 .messages-window {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 20%;
+  height: 100%;
+}
 
+.messages-window__window {
+  background: $messages_window_background_color;
+  overflow-y: scroll;
+  height: 90%;
+}
+
+.messages-window__send-bar {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+}
+
+.messages-window__send-bar__input {
+  width: 80%;
+}
+
+.messages-window__send-bar__send-btn {
+  width: 20%;
 }

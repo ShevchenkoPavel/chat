@@ -1,3 +1,4 @@
 export const lang = {
-  USERS: 'users'
+  USERS: 'users',
+  INPUT_MESSAGE_PLACEHOLDER: 'write message here...'
 };
