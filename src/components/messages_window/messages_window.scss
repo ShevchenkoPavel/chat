@@ -16,6 +16,7 @@ $messages_window_background_color: rgb(234, 234, 234);
 .messages-window__send-bar {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   height: 2rem;
 }
 

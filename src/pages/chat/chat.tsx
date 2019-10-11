@@ -17,10 +17,10 @@ export function Chat(): React.ReactElement {
       style={{ paddingLeft: 0, paddingRight: 0 }}
     >
       <Row noGutters className="chat__container__content">
-        <Col xs={4}>
+        <Col xs={4} className="chat__container__content__column">
           <UsersBar users={users} />
         </Col>
-        <Col>
+        <Col className="chat__container__content__column">
           <MessagesWindow />
         </Col>
       </Row>
