@@ -12,10 +12,7 @@ export function Chat(): React.ReactElement {
   const [users] = useState<UserType[]>(MockUsers.users);
 
   return (
-    <Container
-      className="chat__container"
-      style={{ paddingLeft: 0, paddingRight: 0 }}
-    >
+    <Container className="chat__container noPadding">
       <Row noGutters className="chat__container__content">
         <Col xs={4} className="chat__container__content__column">
           <UsersBar users={users} />
