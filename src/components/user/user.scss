@@ -1,15 +1,15 @@
-$user_status_on: green;
+@import '../../styles/colors';
 
 .user {
     display: flex;
     flex-direction: row;
-    margin: 1rem 0;
-}
+    margin: 1rem;
 
-.user__status {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: $user_status_on;
-    margin-right: 1rem;
+    &__status {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: $user-status-circle__on;
+        margin-right: 1rem;
+    }
 }
