@@ -5,23 +5,23 @@ import { Button, Form } from 'react-bootstrap';
 import { lang } from '../../lang/EN';
 
 import { Message } from '../message/message';
+import { MessageType } from '../../types/message';
 
-export const MessagesWindow = (): React.ReactElement => {
+export type MessageWindowProps = {
+  messages: MessageType[];
+};
+
+export const MessagesWindow = ({
+  messages
+}: MessageWindowProps): React.ReactElement => {
   return (
     <div className="messages-window">
       <div className="messages-window__window">
-        <Message
-          author="user_1"
-          content="Hi there! How are you guys? How about a little holywar in the evening? "
-        />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
-        <Message author="user_1" content="Hi there!" />
+        {messages
+          ? messages.map((message, index) => (
+              <Message message={message} key={index} />
+            ))
+          : null}
       </div>
       <Form>
         <Form.Group
