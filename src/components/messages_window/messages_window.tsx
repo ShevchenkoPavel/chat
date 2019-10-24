@@ -17,11 +17,10 @@ export const MessagesWindow = ({
   return (
     <div className="messages-window">
       <div className="messages-window__window">
-        {messages
-          ? messages.map((message, index) => (
-              <Message message={message} key={index} />
-            ))
-          : null}
+        {//TODO: replace message_id instead index in key
+        messages.map((message, index) => (
+          <Message message={message} key={index} />
+        ))}
       </div>
       <Form>
         <Form.Group
