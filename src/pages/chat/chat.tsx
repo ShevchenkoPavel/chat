@@ -19,10 +19,10 @@ export function Chat(): React.ReactElement {
   return (
     <LayoutContainer className="chat__container" noPadding={true}>
       <Row noGutters className="chat__container__content">
-        <Col xs={4} className="chat__container__content__column">
+        <Col xs={4} className="">
           <UsersBar users={users} />
         </Col>
-        <Col className="chat__container__content__column">
+        <Col xs={8} className="">
           <MessagesWindow messages={messages} />
         </Col>
       </Row>
