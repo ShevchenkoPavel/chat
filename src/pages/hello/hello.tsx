@@ -1,24 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import './hello.scss';
 
-import {
-  Button,
-  FormGroup,
-  FormControl,
-  FormLabel,
-  FormControlProps
-} from 'react-bootstrap';
+import { Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-function useHandleInput(handle: (value: string) => void) {
-  return useCallback(
-    (e: React.FormEvent<FormControlProps & FormControl>): void => {
-      const fixedEventTarget = e.target as HTMLInputElement;
-      handle(fixedEventTarget.value);
-    },
-    [handle]
-  );
-}
+import { useHandleInput } from '../../utils/useHandleInput';
 
 export function Hello(): React.ReactElement {
   const [email, setEmail] = useState('');
