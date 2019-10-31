@@ -9,23 +9,4 @@
     overflow-y: scroll;
     height: 90%;
   }
-
-  &__send-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    height: 2rem;
-  }
-
-  &__send-bar {
-    &__input {
-      width: 80%;
-    }
-  }
-
-  &__send-bar {
-    &__send-btn {
-      width: 20%;
-    }
-  }
 }

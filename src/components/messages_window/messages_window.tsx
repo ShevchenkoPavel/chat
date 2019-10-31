@@ -1,7 +1,7 @@
 import React from 'react';
 import './messages_window.scss';
 
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 import { lang } from '../../lang/EN';
 
 import { Message } from '../message/message';
@@ -23,20 +23,17 @@ export const MessagesWindow = ({
         ))}
       </div>
       <Form>
-        <Form.Group
-          controlId="messageForm"
-          className="messages-window__send-bar"
-        >
-          <Form.Control
-            className="messages-window__send-bar__input"
-            placeholder={lang.INPUT_MESSAGE_PLACEHOLDER}
-          />
-          <Button
-            className="messages-window__send-bar__send-btn"
-            variant="primary"
-          >
-            Send
-          </Button>
+        <Form.Group controlId="messageForm">
+          <Row noGutters>
+            <Col xs={9}>
+              <Form.Control placeholder={lang.INPUT_MESSAGE_PLACEHOLDER} />
+            </Col>
+            <Col xs={3}>
+              <Button block variant="primary">
+                Send
+              </Button>
+            </Col>
+          </Row>
         </Form.Group>
       </Form>
     </div>

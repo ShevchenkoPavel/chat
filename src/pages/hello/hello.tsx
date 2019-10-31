@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import './hello.scss';
 
-import { Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
+import {
+  Button,
+  FormGroup,
+  FormControl,
+  FormLabel,
+  Row,
+  Col
+} from 'react-bootstrap';
 
 import { useHandleInput } from '../../utils/useHandleInput';
 
@@ -17,29 +24,31 @@ export function Hello(): React.ReactElement {
   }
 
   return (
-    <div className="Login">
-      <form>
-        <FormGroup controlId="email">
-          <FormLabel column={false}>Email</FormLabel>
-          <FormControl
-            autoFocus
-            type="email"
-            value={email}
-            onChange={handleSetEmail}
-          />
-        </FormGroup>
-        <FormGroup controlId="password">
-          <FormLabel column={false}>Password</FormLabel>
-          <FormControl
-            value={password}
-            onChange={handlePassword}
-            type="password"
-          />
-        </FormGroup>
-        <Button block disabled={!validateForm()} type="submit">
-          Login
-        </Button>
-      </form>
-    </div>
+    <Row className="justify-content-md-center">
+      <Col sm={4}>
+        <form className="hello-form">
+          <FormGroup controlId="email">
+            <FormLabel column={false}>Email</FormLabel>
+            <FormControl
+              autoFocus
+              type="email"
+              value={email}
+              onChange={handleSetEmail}
+            />
+          </FormGroup>
+          <FormGroup controlId="password">
+            <FormLabel column={false}>Password</FormLabel>
+            <FormControl
+              value={password}
+              onChange={handlePassword}
+              type="password"
+            />
+          </FormGroup>
+          <Button block disabled={!validateForm()} type="submit">
+            Login
+          </Button>
+        </form>
+      </Col>
+    </Row>
   );
 }
