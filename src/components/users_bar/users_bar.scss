@@ -1,20 +1,19 @@
-$header: rgb(0, 188, 212);
-$header_font_color: white;
+@import '../../styles/colors';
 
 .users-bar {
     min-width: 20%;
-    box-shadow: 1px 0 5px grey;
+    box-shadow: 1px 0 5px $users-bar-shadow;
     height: 100%;
-}
 
-.users-bar__header {
-    background-color: $header;
-    font-size: x-large;
-    padding: 1rem 0 1rem 1rem;
-    text-transform: capitalize;
-    color: $header_font_color;
-}
+    &__header {
+        background-color: $users-bar-header;
+        font-size: x-large;
+        padding: 1rem 0 1rem 1rem;
+        text-transform: capitalize;
+        color: $users-bar-header_font_color;
+    }
 
-.users__user-list {
-    margin-left: 1rem;
+    &__user-list {
+        margin-left: 1rem;
+    }
 }

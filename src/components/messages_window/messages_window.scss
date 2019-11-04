@@ -1,0 +1,12 @@
+@import '../../styles/colors';
+
+.messages-window {
+  padding: 5% 20%;
+  height: 100%;
+
+  &__window {
+    background: $messages-window-background-color;
+    overflow-y: scroll;
+    height: 90%;
+  }
+}

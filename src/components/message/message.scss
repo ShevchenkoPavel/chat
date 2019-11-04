@@ -1,0 +1,14 @@
+@import '../../styles/colors';
+
+.message {
+  background-color: $messages-background;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  margin: 1rem 1rem;
+  max-width: 50%;
+
+  &__author {
+    color: $message-author;
+    font-weight: bold;
+  }
+}
