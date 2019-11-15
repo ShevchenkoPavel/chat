@@ -30,10 +30,10 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+#build/Release
 
 # Dependency directories
-node_modules/
+/**/node_modules
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -62,7 +62,7 @@ typings/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+#/node_modules
 /.pnp
 .pnp.js
 
@@ -70,7 +70,10 @@ typings/
 /coverage
 
 # production
+/**/build
+/**/build/
 /build
+/build/
 
 # misc
 .DS_Store
@@ -79,8 +82,7 @@ typings/
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 .idea
+
+lerna-debug.log
+/packages/**/.env
